@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="javascript.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bg1" id="bg" onload="idle()">
+        <title>OwO Clicker v0.32</title>
+		<div id="owoclicker">
+        <div class="header" id="myHeader">
+            <marquee behavior="scroll" direction="left" scrollamount="5">Hey, you should click <a href="about.html" target="_blank">this</a>, or maybe <a href="https://www.youtube.com/watch?v=0XywMDKV-P0" target="_blank">this</a></marquee>
+        </div>
+        <h1>OwO Clicker</h1>
+		<div class="split left">
+        <h2 id="output">0 OwOs</h2>
+        <h2 id="uwu">0 UwUs</h2>
+        <p id="nps">0 OwOPS (+ 0PS)</p>
+        <p id="mplier">+0% boost</p>
+		<p id="subtraction" hidden="hidden">-0.01 OwOPS</p>
+        <br>
+		<!-- The OwO Button -->
+        <img id="owo" src="Resources/OWO-BUTTON.png" onclick="philip()"></button>
+        <br><br><br>
+		<!-- Building 1 & 4 -->
+        <div class="center">
+        <button type="button" id="price1" class="button button2" onclick="philipEvil()">+1 OwOPS (-10 OwOs) (0)</button>
+		<button type="button" class="button button3" onclick="but1BuyMax()">Buy Max</button>
+		<button type="button" id="price4" class="button button2" hidden="hidden" onclick="building11()">+1 OwOPSPS (-100,000 OwOs) (0)</button>
+		</div>
+        <br><br><br>
+		<!-- Building 2 & 5 -->
+        <div class="center">
+        <button type="button" id="price2" class="button button2" onclick="philipEvil2()">+10 OwOPS (-500 OwOs) (0)</button>
+		<button type="button" class="button button3" onclick="but2BuyMax()">Buy Max</button>
+		<button type="button" id="price5" class="button button2" hidden="hidden" onclick="building12()">+10 OwOPSPS (-750,000 OwOs) (0)</button>
+        </div>
+        <br><br><br>
+		<!-- Building 3 & 6 -->
+        <div class="center">
+        <button type="button" id="price3" class="button button2" onclick="philipEvil3()">+100 OwOPS (-7500 OwOs) (0)</button>
+		<button type="button" class="button button3" onclick="but3BuyMax()">Buy Max</button>
+		<button type="button" id="price6" class="button button2" hidden="hidden" onclick="building13()">+100 OwOPSPS (-5,000,000 OwOs) (0)</button>
+        </div>
+        <br><br>
+		<!-- Max/Auto buttons -->
+		<div class="center">
+        <button type="button" class="button button3" onclick="bclick()">Buy Max (M)</button>
+		<button type="button" id="autoButton" class="button button3" onclick="autoBuy()">Auto (OFF)</button>
+		<button type="button" id="autoUpgrade" class="button button3" onclick="autoUpgr()">Auto Upgrade (OFF)</button>
+        </div>
+        <br><br>
+        <br><br>
+		<!-- Timers & Prestige button -->
+        <div class="center">
+		<p id="tremaining">Infinity seconds remaining</p>
+        <button type="button" id="prestige" class="button button1" hidden="hidden" onclick="prestige()">Sacrifice all OwOs for +1 UwU</button>
+		<p id="tremaining2" hidden="hidden">Infinity seconds remaining</p>
+        </div>
+        <br><br><br>
+		<!-- Music -->
+        <div class="center">
+        <audio class="audo" controls loop>
+			<source src="Resources/Night-Disco.mp3" type="audio/mp3">
+        </audio>
+        </div>
+		<br><br>
+		<div class="center">
+		<audio class="audo" controls loop>
+			<source src="Resources/047.ogg" type="audio/ogg">
+		</audio>
+		</div>
+		<!-- Dev button shhhh -->
+		<br><button type="button" class="button center button3" onclick="dev()">1 trillion UwUs</button>
+		</div>
+		<!-- UwU shop -->
+		<div id="tier3" class="split right solid" hidden="hidden">
+			<div id="nwnteleport" class="nwnteleport" hidden="hidden">
+				<button type="button" class="button button1" onclick="clickbutton3()">^w^ Clicker</button>
+			</div>
+			<h2>UwU Shop</h2>
+			<p id="prestigecount">0 Prestiges</p>
+			<p id="uwus">+0 UwUPS</p>
+			<br>
+			<!-- Building 7 -->
+			<div class="center">
+				<button type="button" id="price7" class="button rbutton" onclick="building21()">+1 UwUPH (-1 UwUs) (0)</button>
+			</div>
+			<br>
+			<!-- Building 7 buy max -->
+			<div class="center">
+				<button type="button" class="button button3" onclick="but4BuyMax()">Buy Max</button>
+			</div>
+			<br><br>
+			<!-- Building 8 -->
+			<div class="center">
+				<button type="button" id="price8" class="button rbutton" onclick="building22()">UwUPH*2 (-5 UwUs) (0)</button>
+			</div>
+			<br><br>
+			<!-- Building 9 -->
+			<div class="center">
+				<button type="button" id="price9" class="button rbutton" hidden="hidden" onclick="building23()">UwU on prestige*2 (-10 UwUs) (0)</button>
+			</div>
+			<!-- UwU Upgrade -->
+			<div class="center">
+				<button type="button" id="UwUupgrade" class="button rbutton" hidden="hidden" onclick="upgrade4()">UwU on prestige+# of UwU buildings (-5 UwUs)</button>
+			</div>
+			</div>
+		<!-- Upgrade Shop -->
+		<div id="upgradeshop" class="split upgradeShop solid">
+			<div class="saveload">
+				<button type="button" class="button button1" onclick="openOptions()">Options</button>
+			</div>
+			<h2>Upgrades</h2>
+			<!-- The Upgrades -->
+			<div class="center">
+				<br>
+				<button id="upgrade1" type="button" class="button lbutton" hidden="hidden" onclick="philipEvil4()">OwOPS x2 (-50,000 OwOs)</button>
+				<button id="upgrade2" type="button" class="button lbutton" hidden="hidden" onclick="upgrade2()">Unlock Secondary buildings (-200,000 OwOs)</button>
+				<button id="upgrade3" type="button" class="button lbutton" hidden="hidden" onclick="upgrade3()">OwOPS x4 (-10,000,000 OwOs)</button>
+			</div>
+			</div>
+		</div>
+		<!-- Options Menu -->
+		<div id="options" class="popoptions truecenter" hidden="hidden">
+			<h1 class="optext">Options</h1>
+			<button type="button" class="button opbutton closeBut" onclick="closeOptions()">X</button>
+			<br>
+		    <table>
+			    <tr>
+					<td><button type="button" class="button opbutton" onclick="saveOwO()">Save</button></td>
+					<td><button type="button" class="button opbutton" onclick="loadOwO()">Load</button></td>
+					<td><button type="button" class="button opbutton" onclick="openStats()">Statistics</button></td>
+				</tr>
+				<tr>
+				<td><button type="button" class="button opbutton larmge" onclick="openHardMode()">Hard mode</button></td>
+				<td><button type="button" class="button opbutton larmge" onclick="openExtremeMode()">Extreme mode</button></td>
+				<td><button type="button" class="button opbutton" onclick="themeButton()">Theme</button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button style="background:#fc4c2d;" type="button" class="button opbutton" onclick="openConfirm1()">Reset</button></td>
+				</tr>
+			</table>
+		</div>
+		<!-- Reset confirm screens -->
+		<div id="yesno1" class="confirm1 truecenter" hidden="hidden">
+			<h1 class="optext">Are you sure?</h1>
+			<br>
+			<table>
+				<tr>
+					<td><button style="background:#fc4c2d;" type="button" class="button opbutton" onclick="openConfirm2()">Yes</button></td>
+					<td><button style="background:#2bff4f;" type="button" class="button opbutton" onclick="closeConfirm1()">No</button></td>
+				</tr>
+			</table>
+		</div>
+		<div id="yesno2" class="confirm2 truecenter" hidden="hidden">
+			<h1 class="optext">Are you sure you're sure?</h1>
+			<br>
+			<table>
+				<tr>
+					<td><button style="background:#fc4c2d; font-size:15px; width:30px; height:20px; padding:0px;" type="button" class="button opbutton" onclick="resetGame()">Yes</button></td>
+					<td><button style="background:#2bff4f; font-size:35px; width:400px; font-weight:bold;" type="button" class="button opbutton" onclick="closeConfirm2()">No</button></td>
+				</tr>
+			</table>
+		</div>
+		<!-- Difficulty confirm screens -->
+		<div id="hardmodeyesno" class="confirm1 truecenter" hidden="hidden">
+			<h1 class="optext">Activate hard mode?</h1>
+			<br>
+			<p class="center" style="font-size:15px; color:black;">This will reset your game!</p>
+			<br>
+			<table>
+				<tr>
+					<td><button style="background:#fc4c2d;" type="button" class="button opbutton" onclick="hardMode()">Yes</button></td>
+					<td><button style="background:#2bff4f;" type="button" class="button opbutton" onclick="closeHardMode()">No</button></td>
+				</tr>
+			</table>
+		</div>
+		<div id="extrememodeyesno" class="confirm1 truecenter" hidden="hidden">
+			<h1 class="optext" style="font-size:35px;">Activate extreme mode?</h1>
+			<br>
+			<p class="center" style="font-size:15px; color:black;">This will reset your game!</p>
+			<br>
+			<table>
+				<tr>
+					<td><button style="background:#fc4c2d;" type="button" class="button opbutton" onclick="extremeMode()">Yes</button></td>
+					<td><button style="background:#2bff4f;" type="button" class="button opbutton" onclick="closeExtremeMode()">No</button></td>
+				</tr>
+			</table>
+		</div>
+		<!-- Statistics Screen -->
+		<div id="stats" class="popoptions truecenter stats" hidden="hidden">
+		<h1 class="optext">Statistics</h1>
+		<button type="button" class="button opbutton closeBut" onclick="closeStats()">X</button>
+		<p id="clicount" style="color: black;">0 Clicks</p>
+		</div>
+		<!-- Phase 2 Cutscene -->
+		<div id="intermission" class="split2 left" hidden="hidden">
+			<div class="truecenter">
+				<p id="message1" hidden="hidden">Finally...</p>
+				<p id="message2" hidden="hidden">1 Quintillion OwOs</p>
+				<p id="message3" hidden="hidden">All of this... it's all worth...</p>
+			</div>
+		</div>
+		<!-- Phase 2 -->
+		<div id="^w^clicker" class="split2 left" hidden="hidden">
+		<table class="theDivide">
+		<tr>
+			<td class="bg1" style="height:33%;">
+				<img id="owo" src="Resources/OWO-BUTTON.png" onclick="clickbutton2()"></img>
+			</td>
+			<td><button type="button" class="button button1">Time Clicker (countdown from 1,000,000)</button></td>
+			<td><button type="button" class="button button1">Dice Clicker</button></td>
+		</tr>
+		<tr>
+			<td style="height:33%;"><button type="button" class="button button1">Light Clicker (screen changes as game progresses)</button></td>
+			<td>
+				<p class="nwnheader" id="nwncount">0.01 ^w^s</p>
+				<p id="owoequiv">1 Quintillion OwOs</p>
+			</td>
+			<td><button type="button" class="button button1">Time Clicker 2 (progress through the ages)</button></td>
+		</tr>
+		<tr>
+			<td style="height:33%;"><button type="button" class="button button1">Tedious Clicker</button></td>
+			<td><button type="button" class="button button1">Death clicker</button></td>
+			<td style="background: #36393F;"><img src="Resources/discordLogo.png" id="discbutton" onclick="disctransition()"></img></td>
+		</tr>
+		</table>
+		</div>
+		<div id="discordclicker" hidden="hidden">
+			<div class="split5">
+			</div>
+			<div class="split4">
+			</div>
+			<div id="disclicker" class="split3">
+				<div class="message" style="padding-left: 16px;">
+					<img src="Resources/Avatar1.png" style="float: left;"></img>
+					<p class="discleft" style="color: #FFFFFF; padding-left: 56px; font-family: Noto Sans, sans-serif; font-weight: 600;">Muzza</p>
+					<!--<div class="time">
+						<span class="discleft" style="color: #6C6F77; font-size: 10px;">22:11</span>
+					</div>-->
+					<span class="discleft" style="color: #DCDDDE; left: 62px; position: absolute; font-size: 16px;">Hello</span>
+				</div>
+				<footer class="center">
+					<p class="discleft">Message @Muzza</p>
+				</footer>
+			</div>
+		</div>
+    </body>
+</html>
